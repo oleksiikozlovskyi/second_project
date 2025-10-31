@@ -5,14 +5,14 @@ void main() {
   String? input = stdin.readLineSync();
 
   if (input == null || input.isEmpty) {
-    stdout.writeln('Нічого не введено');
+    print('Нічого не введено');
     return;
   }
 
   int? number = int.tryParse(input);
 
   if (number == null || number <= 0) {
-    stdout.writeln('Потрібно ввести число більше 0');
+    print('Потрібно ввести число більше 0');
     return;
   }
 
@@ -21,5 +21,5 @@ void main() {
   for (int i = 1; i <= number; i++) {
     factorial *= i;
   }
-  stdout.writeln(factorial);
+  print(factorial);
 }
