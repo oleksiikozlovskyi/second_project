@@ -1,31 +1,31 @@
 import 'dart:io';
 
 void main() {
-  stdout.write("Введіть число: ");
-  String? value = stdin.readLineSync();
+  stdout.write('Введіть число: ');
+  String? input = stdin.readLineSync();
 
-  if (value == null || value.isEmpty) {
-    stdout.write("Нічого не введено");
+  if (input == null || input.isEmpty) {
+    stdout.write('Нічого не введено');
     return;
   }
 
-  int? bal = int.tryParse(value);
+  int? bal = int.tryParse(input);
   if (bal == null) {
-    stdout.write("Введено не число");
+    stdout.write('Введено не число');
     return;
   }
 
-  String result = "Оцінка ";
+  String result = 'Оцінка ';
   if (bal >= 90) {
-    result += "A";
+    result += 'A';
   } else if (bal >= 80) {
-    result += "B";
+    result += 'B';
   } else if (bal >= 70) {
-    result += "C";
+    result += 'C';
   } else if (bal >= 60) {
-    result += "D";
+    result += 'D';
   } else {
-    result += "F";
+    result += 'F';
   }
 
   stdout.write(result);
