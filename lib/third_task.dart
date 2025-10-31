@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main() {
+  print('Факторіал числа');
   stdout.write('Введіть число (більше 0): ');
   String? input = stdin.readLineSync();
 
