@@ -1,0 +1,32 @@
+import 'dart:io';
+
+void main() {
+  stdout.write("Введіть число: ");
+  String? value = stdin.readLineSync();
+
+  if (value == null || value.isEmpty) {
+    stdout.write("Нічого не введено");
+    return;
+  }
+
+  int? bal = int.tryParse(value);
+  if (bal == null) {
+    stdout.write("Введено не число");
+    return;
+  }
+
+  String result = "Оцінка ";
+  if (bal >= 90) {
+    result += "A";
+  } else if (bal >= 80) {
+    result += "B";
+  } else if (bal >= 70) {
+    result += "C";
+  } else if (bal >= 60) {
+    result += "D";
+  } else {
+    result += "F";
+  }
+
+  stdout.write(result);
+}
